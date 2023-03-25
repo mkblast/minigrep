@@ -11,9 +11,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
         search(&config.query, &contents)
     };
 
-    for line in results {
-        println!("{}", line);
-    }
+    results.iter().for_each(|e| println!("{}", e));
 
     Ok(())
 }
